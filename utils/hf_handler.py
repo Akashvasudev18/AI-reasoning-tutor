@@ -1,3 +1,5 @@
+
+import os
 from google import genai
 
 # Create Gemini client
@@ -55,3 +57,4 @@ Give:
     except Exception as e:
 
         return f"Error: {str(e)}"
+

@@ -2,7 +2,7 @@ from google import genai
 
 # Create Gemini client
 
-client = genai.Client(api_key=os.getenv("AIzaSyBtVVMuJP543OeL_mRDvWpcOGghPdvCBBo"))
+client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_ai_feedback(problem, reasoning):
     prompt = f"""
@@ -53,4 +53,5 @@ Give:
         )
         return response.text
     except Exception as e:
+
         return f"Error: {str(e)}"

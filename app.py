@@ -18,11 +18,7 @@ if "history" not in st.session_state:
     st.session_state.history = []
 
 # Load prompt template
-with open("prompts/tutor_prompt.txt", "r") as file:
-    template = file.read()
-        
-with open("prompts/solution_prompt.txt", "r") as file:
-    solution_template = file.read()
+
 
 # Page settings
 st.set_page_config(page_title="AI Reasoning Study Companion")
@@ -194,3 +190,4 @@ if len(logic_scores) > 1:
     st.line_chart(logic_scores)
 else:
     st.write("Solve more problems to see progress graph.")
+
